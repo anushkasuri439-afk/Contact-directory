@@ -85,6 +85,17 @@ No. Name                 Phone          Email
 Total: 1 contact(s)
 ```
 
+### 📸 Output Screenshots
+
+#### Fig. 1: Add two contacts and display them
+![Fig. 1: Add two contacts and display them](screenshots/fig1_add_and_display.png)
+
+#### Fig. 2: Restart (2 contacts loaded), validation errors, search
+![Fig. 2: Restart, validation errors, search](screenshots/fig2_validation_and_search.png)
+
+#### Fig. 3: Restart, edit email, delete a contact
+![Fig. 3: Restart, edit email, delete a contact](screenshots/fig3_edit_and_delete.png)
+
 
 ##  Testing
 
