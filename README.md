@@ -85,7 +85,6 @@ No. Name                 Phone          Email
 Total: 1 contact(s)
 ```
 
-*(Add your screenshots to a `screenshots/` folder and link them here.)*
 
 ##  Testing
 
