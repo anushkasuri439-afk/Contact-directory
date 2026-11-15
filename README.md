@@ -1,4 +1,4 @@
-# 📇 File-Based Contact Directory (C++)
+#  File-Based Contact Directory (C++)
 
 A menu-driven, console-based Contact Directory written in C++11 that stores contacts permanently on disk. Built as a mini project for **CIC-211: Object-Oriented Programming using C++**.
 
@@ -60,7 +60,7 @@ g++ -std=c++11 contact_directory.cpp -o contact_directory
 
 > On Windows, run `contact_directory.exe`. The data file (`contacts.txt`) is created automatically on the first save.
 
-##  Sample Output
+## 🖥️ Sample Output
 
 ```
 ===== CONTACT DIRECTORY =====
@@ -115,7 +115,7 @@ All 13 test cases passed:
 | 9 | Run with no `contacts.txt` | Starts with empty list | Pass |
 | 10 | Data file has a broken line (e.g. `Asha\|123`) | Line skipped, other contacts load | Pass |
 | 11 | Search by phone `9876543210` | Asha Verma shown | Pass |
-| 12 | Edit phone to one that already exists | Error: already exists; contact unchanged | Pass |
+| 12 | Edit phone to one that already exists | Error: another contact already uses it; contact unchanged | Pass |
 | 13 | Delete contact, answer `n` | Contact kept, file unchanged | Pass |
 
 Data saved in one run is correctly reloaded in the next, and invalid input never crashes the program.
