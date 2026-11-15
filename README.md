@@ -61,7 +61,7 @@ g++ -std=c++11 main.cpp -o contact_directory
 
 > Replace `main.cpp` with your actual source file name(s). On Windows, run `contact_directory.exe`. The data file (`contacts.txt`) is created automatically on the first save.
 
-## 🖥️ Sample Output
+##  Sample Output
 
 ```
 ===== CONTACT DIRECTORY =====
@@ -85,7 +85,7 @@ No. Name                 Phone          Email
 Total: 1 contact(s)
 ```
 
-### 📸 Output Screenshots
+###  Output Screenshots
 
 #### Fig. 1: Add two contacts and display them
 ![Fig. 1: Add two contacts and display them](screenshots/fig1_add_and_display.png)
