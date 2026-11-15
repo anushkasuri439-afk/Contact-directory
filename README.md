@@ -1,5 +1,4 @@
-
-#  File-Based Contact Directory (C++)
+# 📇 File-Based Contact Directory (C++)
 
 A menu-driven, console-based Contact Directory written in C++11 that stores contacts permanently on disk. Built as a mini project for **CIC-211: Object-Oriented Programming using C++**.
 
@@ -42,7 +41,7 @@ Managing contacts on paper or in scattered notes is slow and error-prone. This p
 
 **File format:** one contact per line as `name|phone|email`
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - C++11 (standard library only)
 - STL: `vector`, `algorithm`, iterators
@@ -53,13 +52,13 @@ Managing contacts on paper or in scattered notes is slow and error-prone. This p
 ##  How to Run
 
 ```bash
-git clone https://github.com/anushkasuri439-afk/file-based-contact-directory-cpp.git
-cd file-based-contact-directory-cpp
-g++ -std=c++11 main.cpp -o contact_directory
+git clone https://github.com/anushkasuri439-afk/Contact-directory.git
+cd Contact-directory
+g++ -std=c++11 contact_directory.cpp -o contact_directory
 ./contact_directory
 ```
 
-> Replace `main.cpp` with your actual source file name(s). On Windows, run `contact_directory.exe`. The data file (`contacts.txt`) is created automatically on the first save.
+> On Windows, run `contact_directory.exe`. The data file (`contacts.txt`) is created automatically on the first save.
 
 ##  Sample Output
 
@@ -85,33 +84,39 @@ No. Name                 Phone          Email
 Total: 1 contact(s)
 ```
 
-###  Output Screenshots
+### Output Screenshots
 
-#### Fig. 1: Add two contacts and display them
+**Fig. 1: Add two contacts and display them**
+
 ![Fig. 1: Add two contacts and display them](screenshots/fig1_add_and_display.png)
 
-#### Fig. 2: Restart (2 contacts loaded), validation errors, search
+**Fig. 2: Restart (2 contacts loaded), validation errors, search**
+
 ![Fig. 2: Restart, validation errors, search](screenshots/fig2_validation_and_search.png)
 
-#### Fig. 3: Restart, edit email, delete a contact
-![Fig. 3: Restart, edit email, delete a contact](screenshots/fig3_edit_and_delete.png)
+**Fig. 3: Restart, edit email, delete a contact**
 
+![Fig. 3: Restart, edit email, delete a contact](screenshots/fig3_edit_and_delete.png)
 
 ##  Testing
 
-All 9 test cases passed:
+All 13 test cases passed:
 
-| # | Test input | Result |
-|---|---|---|
-| 1 | Add Asha Verma, 9876543210 | Added and saved |
-| 2 | Add contact with an existing phone | Error: already exists |
-| 3 | Phone `12345` (boundary/invalid) | Error: 10-13 digits |
-| 4 | Email `neha@mail` | Error: invalid email |
-| 5 | Menu choice 9 | Invalid choice message |
-| 6 | Search name `asha` | Asha Verma shown |
-| 7 | Edit email only (blank = keep) | Only email changes |
-| 8 | Delete contact, answer `y` | Removed, file updated |
-| 9 | Run with no `contacts.txt` | Starts with empty list |
+| # | Test input | Expected result | Status |
+|---|---|---|---|
+| 1 | Add Asha Verma, 9876543210 | Added and saved | Pass |
+| 2 | Add contact with an existing phone | Error: already exists | Pass |
+| 3 | Phone `12345` (boundary/invalid) | Error: 10-13 digits | Pass |
+| 4 | Email `neha@mail` | Error: invalid email | Pass |
+| 5 | Menu choice 9 | Invalid choice message | Pass |
+| 6 | Search name `asha` | Asha Verma shown | Pass |
+| 7 | Edit email only (blank = keep) | Only email changes | Pass |
+| 8 | Delete contact, answer `y` | Removed, file updated | Pass |
+| 9 | Run with no `contacts.txt` | Starts with empty list | Pass |
+| 10 | Data file has a broken line (e.g. `Asha\|123`) | Line skipped, other contacts load | Pass |
+| 11 | Search by phone `9876543210` | Asha Verma shown | Pass |
+| 12 | Edit phone to one that already exists | Error: already exists; contact unchanged | Pass |
+| 13 | Delete contact, answer `n` | Contact kept, file unchanged | Pass |
 
 Data saved in one run is correctly reloaded in the next, and invalid input never crashes the program.
 
@@ -128,4 +133,5 @@ Data saved in one run is correctly reloaded in the next, and invalid input never
 
 - **SDG 9**: Industry, Innovation and Infrastructure (building reliable digital tools)
 - **SDG 4**: Quality Education (hands-on learning of programming)
+
 
